@@ -1,0 +1,104 @@
+/*Обнуление*/
+*{padding:0;margin:0;border:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+/*--------------------*/
+
+.wrapper {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 40px 10px;
+}
+
+.row {
+    display: flex;
+    height: 150px;
+}
+
+.column {
+    flex: 0 0 33.333%;
+}
+
+.column__block {
+    height: 100%;
+    cursor: pointer;
+}
+
+.column-dir {
+    flex: 0 0 66.667%;
+    display: flex;
+    flex-direction: column;
+}
+
+.column__row {
+    display: flex;
+    height: 25px;
+}
+
+.column__row >* {
+    flex: 0 0 50%;
+}
+
+.column__full-width {
+    height: 100px;
+}
+
+.column__block-red {
+    background-color: red;
+}
+
+.column__block-blue {
+    background-color: blue;
+}
+
+.column__block-green {
+    background-color: green;
+}
+
+.column__block-purple {
+    background-color: purple;
+}
+
+.column__block-orange {
+    background-color: orange;
+}
+
+.column__block-light {
+    background-color: lightyellow;
+}
+
+.column__block-red.active {
+    background-color: rgb(161, 161, 161);
+}
+
+.column__block-blue.active  {
+    background-color: yellow;
+}
+
+.column__block-green.active  {
+    background-color: pink;
+}
+
+.column__block-purple.active  {
+    background-color: lightskyblue;
+}
+
+.column__block-orange.active  {
+    background-color: brown;
+}
+
+.column__block-light.active  {
+    background-color: rgb(50, 2, 112);
+}
