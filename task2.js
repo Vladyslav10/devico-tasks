@@ -15,16 +15,16 @@ const d = {
   right: 1,
 };
 
-function getValues(obj) {
-  getProp(obj);
-
-  function getProp(o) {
-    for (var prop in o) {
-      if (typeof o[prop] === "object") {
-        getProp(o[prop]);
-      } else {
-        console.log("Finite value: ", o[prop]);
+function replaceInObj(obj) {
+  for (const key in obj) {
+      if (obj[key] != null && typeof obj[key] === 'object') {
+        replaceInObj(obj[key]);
+      } else if ([0, 1].includes(obj[key])) {
+        obj[key] ^= 1;
       }
-    }
   }
+  return obj;
 }
+
+const showResult = () => console.log(replaceInObj(d))
+showResult();
